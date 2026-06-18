@@ -1,5 +1,8 @@
 module Framebuffer where
 
+import Mesh ( Mesh )
+import SDL
+
 --- Types ---
 
 data Colour = Colour
@@ -40,3 +43,9 @@ clearPixel fb x y = setPixel fb x y (Colour 0 0 0 1)
 
 clearFramebuffer :: Framebuffer -> Colour -> Framebuffer
 clearFramebuffer fb colour = fb { pixels = replicate (height fb) (replicate (width fb) colour) }
+
+drawMesh :: Framebuffer -> Mesh -> Framebuffer
+drawMesh fb mesh = undefined
+
+drawFramebuffer :: Framebuffer -> IO ()
+drawFramebuffer fb = undefined 
