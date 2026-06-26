@@ -67,13 +67,16 @@ executable h3d
         Camera
         Mesh
         Framebuffer
+        Xlib
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
 
     -- Other library packages from which modules are imported.
     build-depends:    base ^>=4.18.3.0,
-                      sdl2
+
+    -- System C libraries to link against (Xlib).
+    extra-libraries:  X11
 
     -- Directories containing source files.
     hs-source-dirs:   app
